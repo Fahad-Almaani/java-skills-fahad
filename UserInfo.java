@@ -52,4 +52,25 @@ public class UserInfo {
         System.out.println("  Status   : " + (isActive ? "Active" : "Inactive"));
     }
 
+    public static void main(String[] args){
+        UserInfo user1 = new UserInfo("Fahad Almaani",22,"fahad@gmail.com",true);
+        UserInfo user2 = new UserInfo("Said mohammed",32,"fahad@gmail.com",true);
+        UserInfo user3 = new UserInfo("Someone nobody", 41, "fahad@gmail.com", false);
+
+        user1.displayInfo();
+        user2.displayInfo();
+        user3.displayInfo();
+
+        System.out.println("---------Testing Getter and setters---------");
+
+        user1.setName("Fahad updated");
+        user1.setAeg(30);
+        user1.setActive(false);
+        user1.setEmail("F@gmail.com");
+
+        System.out.println(user1.getName());
+        System.out.println(user1.getEmail());
+        System.out.println(user1.getAeg());
+        System.out.println(user1.isActive());
+    }
 }
