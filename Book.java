@@ -1,10 +1,10 @@
 public class Book {
     protected String title;
     protected String author;
-    protected String pages;
+    protected int pages;
     protected boolean isAvailable;
 
-    public Book(String pages, String author, String title) {
+    public Book(String title, String author,int pages) {
         this.pages = pages;
         this.isAvailable = true;
         this.author = author;
@@ -40,7 +40,7 @@ public class Book {
         return author;
     }
 
-    public String getPages() {
+    public int getPages() {
         return pages;
     }
 
