@@ -28,5 +28,29 @@ public class GradeManger {
         }
         return null;
     }
+    public static char getLetterGrade(int score){
+        char grade;
+        if(score < 60){
+            grade = 'F';
+        }else if(score < 70){
+            grade = 'D';
+        }else if(score < 80){
+            grade = 'C';
+        }else if (score<90){
+            grade= 'B';
+        }else{
+            grade = 'A';
+        }
+        return grade;
+    }
 
+    public static String[] findFailingStudents(String[] names, int[] scores){
+        List<String> failingStudentList = new ArrayList<>();
+        for(int i=0;i<scores.length;i++){
+            if(scores[i]<60){
+                failingStudentList.add(names[i]);
+            }
+        }
+        return failingStudentList.toArray(new String[0]);
+    }
 }
